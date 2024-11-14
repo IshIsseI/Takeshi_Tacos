@@ -28,32 +28,26 @@ public class MapSelectMain : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){
             if(NowMap == 0){
-                NowMap = 1;
-                _Character.position = _Path[1].position;
+                ChangeMap(NowMap + 1);
             }else if(NowMap == 2){
-                NowMap = 3;
-                _Character.position = _Path[3].position;
+                ChangeMap(NowMap + 1);
             }
         }
         else if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)){
             if(NowMap == 1){
-                NowMap = 2;
-                _Character.position = _Path[2].position;
+                ChangeMap(NowMap + 1);
             }
         }
         else if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
             if(NowMap == 1){
-                NowMap = 0;
-                _Character.position = _Path[0].position;
+                ChangeMap(NowMap - 1);
             }else if(NowMap == 3){
-                NowMap = 2;
-                _Character.position = _Path[2].position;
+                ChangeMap(NowMap - 1);
             }
         }
         else if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)){
             if(NowMap == 2){
-                NowMap = 1;
-                _Character.position = _Path[1].position;
+                ChangeMap(NowMap - 1);
             }
         }
 
@@ -73,5 +67,10 @@ public class MapSelectMain : MonoBehaviour
                     break;
             }
         }
+    }
+
+    void ChangeMap(int i){
+        NowMap = i;
+        _Character.position = _Path[i].position;
     }
 }
