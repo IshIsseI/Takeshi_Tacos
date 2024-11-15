@@ -1,8 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using UnityEditor;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 
 public class Buttle : MonoBehaviour
 {
@@ -18,6 +15,9 @@ public class Buttle : MonoBehaviour
     private int Enemy_HP;
 
     public GameObject playerPanel;
+
+    [SerializeField] public PlayerManager _playerManager;
+    [SerializeField] public ItemSetting _itemSetting;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -127,6 +127,8 @@ public class Buttle : MonoBehaviour
     }
 
     public void GetItem(){
-
+        ItemData getItem = _itemSetting.RandomItem(10);
+        _playerManager.CountItem(getItem.ID, getItem.Name, getItem.itemType, 1);
+        Debug.Log(getItem.Name + "get!");
     }
 }

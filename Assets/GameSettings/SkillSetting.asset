@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: SkillSetting
   m_EditorClassIdentifier: 
   DataList:
-  - Id: punch
+  - ID: punch
     Name: "\u3071\u3093\u3061"
     Attack: 10
     MaxNum: 10
-  - Id: kick
+  - ID: kick
     Name: "\u304D\u3063\u304F"
     Attack: 10
     MaxNum: 10
-  - Id: thinking
+  - ID: thinking
     Name: "\u304B\u3093\u304C\u3048\u308B"
     Attack: 0
     MaxNum: 20
-  - Id: fire
+  - ID: fire
     Name: "\u307E\u308B\u3084\u304D\u306B\u3059\u308B"
     Attack: 20
     MaxNum: 5

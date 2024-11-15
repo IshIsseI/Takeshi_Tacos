@@ -313,6 +313,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7804360210788916278, guid: 3c939450f9e639f458f0266779cbe5da, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804360210788916278, guid: 3c939450f9e639f458f0266779cbe5da, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -328,42 +332,14 @@ PrefabInstance:
       addedObject: {fileID: 412342103}
     - targetCorrespondingSourceObject: {fileID: 7804360210788916278, guid: 3c939450f9e639f458f0266779cbe5da, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 412342111}
+    - targetCorrespondingSourceObject: {fileID: 7804360210788916278, guid: 3c939450f9e639f458f0266779cbe5da, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 412342106}
     - targetCorrespondingSourceObject: {fileID: 7804360210788916278, guid: 3c939450f9e639f458f0266779cbe5da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 412342109}
   m_SourcePrefab: {fileID: 100100000, guid: 3c939450f9e639f458f0266779cbe5da, type: 3}
---- !u!1 &83353501
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 83353502}
-  m_Layer: 0
-  m_Name: Data
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &83353502
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 83353501}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 991.8772, y: 322.9303, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &89488942
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +422,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 89488945}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2011223924}
+        m_TargetAssemblyTypeName: Buttle, Assembly-CSharp
+        m_MethodName: OnSkill
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 89488942}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &89488945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +555,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 125271451}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2011223924}
+        m_TargetAssemblyTypeName: Buttle, Assembly-CSharp
+        m_MethodName: OnSkill
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 125271448}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &125271451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,7 +852,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 242501056}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2011223924}
+        m_TargetAssemblyTypeName: Buttle, Assembly-CSharp
+        m_MethodName: OnSkill
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 242501053}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &242501056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,6 +1163,19 @@ CapsuleCollider:
   m_Height: 1.6328341
   m_Direction: 1
   m_Center: {x: 0, y: 0.8209831, z: 0}
+--- !u!114 &412342111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412342100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6efea7139b6e04520b3283ae4a66b2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemDataList: []
 --- !u!1 &462561233 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 139454, guid: 380272978726d224cb57e616c2f52241, type: 3}
@@ -2240,13 +2265,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2011223924}
+        m_TargetAssemblyTypeName: Buttle, Assembly-CSharp
+        m_MethodName: OnSkill
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 1185610091}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2584,8 +2609,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 412342103}
-        m_TargetAssemblyTypeName: Takeshi, Assembly-CSharp
+      - m_Target: {fileID: 2011223924}
+        m_TargetAssemblyTypeName: Buttle, Assembly-CSharp
         m_MethodName: OnEscapeButton
         m_Mode: 1
         m_Arguments:
@@ -2799,7 +2824,7 @@ GameObject:
   - component: {fileID: 1606900306}
   - component: {fileID: 1606900305}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PlayerPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3175,7 +3200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2011223920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3281,6 +3306,9 @@ MonoBehaviour:
   - {fileID: 1099342197}
   - {fileID: 1164724316}
   _enemySetting: {fileID: 11400000, guid: e4c29906e85794d9eaa6a3e3884d613b, type: 2}
+  playerPanel: {fileID: 1606900303}
+  _playerManager: {fileID: 412342111}
+  _itemSetting: {fileID: 11400000, guid: 9f72a083cc063497889a1a4cfabcb72a, type: 2}
 --- !u!1 &2047721487
 GameObject:
   m_ObjectHideFlags: 0
@@ -3421,7 +3449,6 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 83353502}
   - {fileID: 287568978}
   - {fileID: 78576444}
   - {fileID: 174482935}
