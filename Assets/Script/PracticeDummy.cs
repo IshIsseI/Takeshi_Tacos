@@ -7,7 +7,7 @@ public class PracticeDummy : MonoBehaviour
     [SerializeField] private Transform player;
     private Animator animator;
 
-    public float lookRadius = 10f;
+    public float lookRadius;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
