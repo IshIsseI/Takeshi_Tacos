@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class Takeshi : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class Takeshi : MonoBehaviour
 
      public static string touchEnemy;
      [SerializeField] public Buttle _buttle;
+
+     public GameObject MenuPanel;
 
      public static int Player_HP = 100;
      void Start()
@@ -76,6 +79,12 @@ public class Takeshi : MonoBehaviour
           {
                animator.SetBool("Jump", false);
           }
+
+          if (Input.GetKeyDown(KeyCode.Escape))
+          {
+               MenuPanel.SetActive(true);
+               Time.timeScale = 0;
+          }
      }
 
      private void FixedUpdate()
@@ -93,7 +102,7 @@ public class Takeshi : MonoBehaviour
           if (enemy_col.gameObject.tag == "Enemy")
           {
                Debug.Log("Touch");
-               touchEnemy = enemy_col.gameObject.name;
+               touchEnemy = enemy_col.gameObject.GetComponent<EnemyName>().Enemy_Name;
                ButtleCanvas.SetActive(true);
                _buttle.ButtleStart();
                Destroy(enemy_col.gameObject);

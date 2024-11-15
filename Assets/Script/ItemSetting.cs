@@ -15,8 +15,8 @@ public class ItemData
     public string ID;
     public string Name;
     public ItemType itemType;
-    [SerializeField] private int count;
-    
+    public int count;
+
 
     public ItemData(string ID, string Name, ItemType itemType, int count)
     {

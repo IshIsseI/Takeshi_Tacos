@@ -9,23 +9,30 @@ public class PlayerManager : MonoBehaviour
     //アイテムを取得
     public void CountItem(string itemId, string itemName, ItemType itemType, int count)
     {
+        // IDが一致するアイテムがあるか検索
+        bool itemFound = false;
+
         for (int i = 0; i < _itemDataList.Count; i++)
         {
-            //IDが一致していたらカウント
             if (_itemDataList[i].ID == itemId)
             {
+                // IDが一致した場合、カウントを増加
                 _itemDataList[i].CountUp(count);
+                itemFound = true;
                 break;
             }
         }
 
-        //IDが一致しなければアイテムを追加
-        ItemData itemData = new(itemId, itemName, itemType, count);
-        _itemDataList.Add(itemData);
+        // IDが一致しなければ新しいアイテムを追加
+        if (!itemFound)
+        {
+            ItemData itemData = new ItemData(itemId, itemName, itemType, count);
+            _itemDataList.Add(itemData);
+        }
     }
 
     //アイテムを使用
-    public void UseItem(string itemId,int count)
+    public void UseItem(string itemId, int count)
     {
         //List内を検索
         for (int i = 0; i < _itemDataList.Count; i++)
@@ -38,5 +45,10 @@ public class PlayerManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public List<ItemData> GetItemData()
+    {
+        return _itemDataList;
     }
 }
