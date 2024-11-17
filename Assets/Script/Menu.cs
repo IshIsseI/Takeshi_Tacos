@@ -39,7 +39,8 @@ public class Menu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             gameObject.SetActive(false);
-            Time.timeScale = 1;
+            Takeshi.CanMove = true;
+            //Time.timeScale = 1;
         }
     }
 

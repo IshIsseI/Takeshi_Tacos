@@ -11,7 +11,6 @@ public class MapSelectMain : MonoBehaviour
 
     private int NowMap;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _Character = Character.GetComponent<RectTransform> ();
@@ -23,7 +22,6 @@ public class MapSelectMain : MonoBehaviour
         NowMap = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){

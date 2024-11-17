@@ -18,6 +18,7 @@ public class Buttle : MonoBehaviour
 
     [SerializeField] public PlayerManager _playerManager;
     [SerializeField] public ItemSetting _itemSetting;
+    [SerializeField] public Takeshi _takeshi;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -88,7 +89,9 @@ public class Buttle : MonoBehaviour
     public void OnEscapeButton()
      {
           gameObject.SetActive(false);
-          Time.timeScale = 1;
+          _takeshi.Escape();
+          Takeshi.CanMove = true;
+          //Time.timeScale = 1;
      }
 
     //攻撃のボタン
@@ -121,9 +124,11 @@ public class Buttle : MonoBehaviour
     //勝利時
     public void PlayerWin(){
         Debug.Log("PlayerWin");
+        _takeshi.ChangeCamera(1);
         gameObject.SetActive(false);
         GetItem();
-        Time.timeScale = 1;
+        Takeshi.CanMove = true;
+        //Time.timeScale = 1;
     }
 
     public void GetItem(){

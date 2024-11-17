@@ -7,10 +7,8 @@ public class StartPageMain : MonoBehaviour
 {
     public GameObject StartPage;
     public GameObject Explanetion;
-
     private bool isStart;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         StartPage.SetActive(true);
@@ -18,7 +16,6 @@ public class StartPageMain : MonoBehaviour
         isStart = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Return) && isStart == true){

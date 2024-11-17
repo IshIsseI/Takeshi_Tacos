@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using UnityEngine;
 
 public enum ItemType{
@@ -47,7 +46,7 @@ public class ItemSetting : ScriptableObject
     public List<ItemData> Sauce;
 
     public ItemData RandomItem(int max){
-        int rnd = UnityEngine.Random.Range(1, 3);
+        int rnd = UnityEngine.Random.Range(1, 4);
         switch(rnd){
             case 1:
                 return Tortilla[UnityEngine.Random.Range(0, max)];
